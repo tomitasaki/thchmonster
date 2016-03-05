@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Lobby View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="thchmonster" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LobbyViewController" customModule="thchmonster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FKL-Mo-zzb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lobby.png" translatesAutoresizingMaskIntoConstraints="NO" id="WL0-56-v7Z">
                                 <rect key="frame" x="0.0" y="20" width="320" height="273"/>
                             </imageView>
@@ -51,21 +54,23 @@
                                 <color key="textColor" red="0.96695965920000004" green="0.98237126890000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FKL-Mo-zzb">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="levelLabel" destination="vJk-Cg-wID" id="2LD-Bd-I7Y"/>
+                        <outlet property="nameLabel" destination="WSU-Ha-8G7" id="HPK-8M-LCD"/>
+                        <outlet property="staminaBar" destination="BRa-tv-MwA" id="7YM-kT-5lK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66" y="340"/>
+            <point key="canvasLocation" x="45" y="340"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QvH-Mt-miA">
             <objects>
-                <viewController id="cZ2-qb-UeU" sceneMemberID="viewController">
+                <viewController id="cZ2-qb-UeU" customClass="ViewController" customModule="thchmonster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lhe-MZ-gGS"/>
                         <viewControllerLayoutGuide type="bottom" id="iCC-Xt-E8A"/>
@@ -92,6 +97,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLc-9f-4PY">
                                 <rect key="frame" x="72" y="392" width="177" height="69"/>
                                 <state key="normal" title="攻撃" backgroundImage="gold_button.png"/>
+                                <connections>
+                                    <action selector="playerAttack" destination="cZ2-qb-UeU" eventType="touchUpInside" id="12d-Ym-NoW"/>
+                                </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bkk-8t-aA6">
                                 <rect key="frame" x="162" y="205" width="150" height="2"/>
@@ -111,6 +119,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="attackButton" destination="vLc-9f-4PY" id="hNw-Di-ABq"/>
+                        <outlet property="backgroundImageView" destination="z2s-TI-Mv0" id="wiy-Dl-JiK"/>
+                        <outlet property="enemyHPBar" destination="X0U-DH-vZV" id="hCg-U8-tBH"/>
+                        <outlet property="enemyImageView" destination="SjB-Pu-Ltr" id="02b-le-Vuj"/>
+                        <outlet property="enemyNameLabel" destination="lpN-k7-rNf" id="0al-eP-Aof"/>
+                        <outlet property="playerHPBar" destination="Bkk-8t-aA6" id="3DU-nH-AoE"/>
+                        <outlet property="playerImageView" destination="KIb-4F-1cF" id="LEd-vJ-5BI"/>
+                        <outlet property="playerNameLabel" destination="DsJ-vc-50S" id="SQc-eM-fBW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oqZ-mf-8i5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

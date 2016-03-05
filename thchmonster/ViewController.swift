@@ -116,7 +116,7 @@ class ViewController: UIViewController {
             finishedMessage = "プレイヤーの敗北！"
         }
         
-        var alert = UIAlertController(title: "バトル終了", message: finishedMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "バトル終了", message: finishedMessage, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(
             UIAlertAction(
                 title: "OK", style: .Default, handler: { action in

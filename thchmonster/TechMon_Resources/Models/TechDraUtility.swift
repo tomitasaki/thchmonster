@@ -32,13 +32,6 @@ class TechDraUtility: NSObject, AVAudioPlayerDelegate {
         imageView.layer.addAnimation(animation, forKey: "position")
         
     }
-    
-    /* invalid v1.0
-    class func attackAnimation(imageView: UIImageView) {
-        
-    }
-    */
-    
     class func vanishAnimation(imageView: UIImageView) {
         
         UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
@@ -50,15 +43,19 @@ class TechDraUtility: NSObject, AVAudioPlayerDelegate {
     func playSE(fileName: String) {
         
         //AVAudioPlayer
-        var soundFilePath = NSBundle.mainBundle().pathForResource(fileName, ofType: "mp3")!
+        let soundFilePath = NSBundle.mainBundle().pathForResource(fileName, ofType: "mp3")!
         let fileURL: NSURL = NSURL(fileURLWithPath: soundFilePath)
+       
         /*
         //TODO: fix unwrapping error
         var error: NSError? = nil
         NSLog("%@", error!)
         */
-        SE_audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, fileTypeHint: nil)
+        
+
+        SE_audioPlayer = try! AVAudioPlayer(contentsOfURL: fileURL, fileTypeHint: nil)
         SE_audioPlayer.prepareToPlay()
+ 
         if SE_audioPlayer.playing == true {
             SE_audioPlayer.currentTime = 0
         }
@@ -82,7 +79,7 @@ class TechDraUtility: NSObject, AVAudioPlayerDelegate {
         var error: NSError? = nil
         NSLog("%@", error!)
         */
-        BGM_audioPlayer = AVAudioPlayer(contentsOfURL: fileURL,)
+        BGM_audioPlayer = try! AVAudioPlayer(contentsOfURL: fileURL)
         BGM_audioPlayer.numberOfLoops = -1
         BGM_audioPlayer.delegate = self
         BGM_audioPlayer.prepareToPlay()
@@ -97,7 +94,7 @@ class TechDraUtility: NSObject, AVAudioPlayerDelegate {
         BGM_audioPlayer.stop()
     }
     
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         if flag {
             
         }

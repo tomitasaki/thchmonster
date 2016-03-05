@@ -11,7 +11,6 @@
 		BA34C87D1C7D7B3D00D9FB04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34C87C1C7D7B3D00D9FB04 /* ViewController.swift */; };
 		BA34C8801C7D7B3D00D9FB04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA34C87E1C7D7B3D00D9FB04 /* Main.storyboard */; };
 		BA34C8821C7D7B3D00D9FB04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA34C8811C7D7B3D00D9FB04 /* Assets.xcassets */; };
-		BA34C8851C7D7B3D00D9FB04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA34C8831C7D7B3D00D9FB04 /* LaunchScreen.storyboard */; };
 		BA34C8901C7D7B3D00D9FB04 /* thchmonsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34C88F1C7D7B3D00D9FB04 /* thchmonsterTests.swift */; };
 		BA34C89B1C7D7B3D00D9FB04 /* thchmonsterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34C89A1C7D7B3D00D9FB04 /* thchmonsterUITests.swift */; };
 		BA34C8C01C7D7B7800D9FB04 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA34C8AA1C7D7B7800D9FB04 /* Default-568h@2x.png */; };
@@ -58,7 +57,6 @@
 		BA34C87C1C7D7B3D00D9FB04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA34C87F1C7D7B3D00D9FB04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA34C8811C7D7B3D00D9FB04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BA34C8841C7D7B3D00D9FB04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA34C8861C7D7B3D00D9FB04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA34C88B1C7D7B3D00D9FB04 /* thchmonsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = thchmonsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA34C88F1C7D7B3D00D9FB04 /* thchmonsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thchmonsterTests.swift; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 				BA34C87C1C7D7B3D00D9FB04 /* ViewController.swift */,
 				BA34C87E1C7D7B3D00D9FB04 /* Main.storyboard */,
 				BA34C8811C7D7B3D00D9FB04 /* Assets.xcassets */,
-				BA34C8831C7D7B3D00D9FB04 /* LaunchScreen.storyboard */,
 				BA34C8861C7D7B3D00D9FB04 /* Info.plist */,
 				BA34C8D41C7D7ECE00D9FB04 /* LobbyViewController.swift */,
 			);
@@ -339,7 +336,6 @@
 			files = (
 				BA34C8C91C7D7B7800D9FB04 /* waku.png in Resources */,
 				BA34C8D01C7D7B7800D9FB04 /* SE_fanfare.mp3 in Resources */,
-				BA34C8851C7D7B3D00D9FB04 /* LaunchScreen.storyboard in Resources */,
 				BA34C8C71C7D7B7800D9FB04 /* gold_button.png in Resources */,
 				BA34C8CD1C7D7B7800D9FB04 /* BGM_battle001.mp3 in Resources */,
 				BA34C8CE1C7D7B7800D9FB04 /* lobby.mp3 in Resources */,
@@ -426,14 +422,6 @@
 				BA34C87F1C7D7B3D00D9FB04 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BA34C8831C7D7B3D00D9FB04 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA34C8841C7D7B3D00D9FB04 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -613,6 +601,7 @@
 				BA34C8A11C7D7B3D00D9FB04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA34C8A21C7D7B3D00D9FB04 /* Build configuration list for PBXNativeTarget "thchmonsterTests" */ = {
 			isa = XCConfigurationList;
@@ -621,6 +610,7 @@
 				BA34C8A41C7D7B3D00D9FB04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA34C8A51C7D7B3D00D9FB04 /* Build configuration list for PBXNativeTarget "thchmonsterUITests" */ = {
 			isa = XCConfigurationList;
@@ -629,6 +619,7 @@
 				BA34C8A71C7D7B3D00D9FB04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
